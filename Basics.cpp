@@ -4,7 +4,7 @@
 
 // so these are the libraries each for I/O operations , for math functions and for string respectively
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // int main(){
@@ -22,7 +22,7 @@ using namespace std;
 //     return 0;
 // }
 
-// DATA TYPES 
+// DATA TYPES
 
 // 1.int (4 bytes)
 // 2.unsigned short (2 bytes ){0 -->> 65,535}
@@ -32,7 +32,6 @@ using namespace std;
 // float (4 byte)
 // double (8 byte)
 // long double (10 byte)
-
 
 // string and getline
 
@@ -45,7 +44,7 @@ using namespace std;
 //     return 0;
 // }
 // word after space is considered as new string
-// always in double quotes 
+// always in double quotes
 
 // if we want to group strings and bring it to line ,use getline (internal function)
 
@@ -56,12 +55,12 @@ using namespace std;
 //     return 0;
 // }
 
-// exmaple : input :hey i am this 
-                    // ohhh
+// exmaple : input :hey i am this
+// ohhh
 
-                    // the first line will be printed and second doesn't due to termination
+// the first line will be printed and second doesn't due to termination
 
-// CHAR : there are 256 charcters in english dictionary ,it can store all of them 
+// CHAR : there are 256 charcters in english dictionary ,it can store all of them
 
 // in single quotes
 
@@ -80,7 +79,7 @@ int main(){
     cin >> age;
     if(age > 18){
         cout << "you are an adult ";
-        
+
     }else{
         cout << "you are not an adult ";
     }
@@ -106,3 +105,90 @@ int main(){
 // }
 
 // SWITCH Statement
+
+// int main()
+// {
+//     int day;
+//     cin >> day;
+//     switch (day)
+//     {
+//     case 1:
+//         cout << "monday";
+//         break;
+//     case 2:
+//         cout << "tuesday";
+//         break;
+
+//     case 3:
+//         cout << "wednesday";
+//         break;
+
+//     case 4:
+//         cout << "thrusday";
+//         break;
+
+//     case 5:
+//         cout << "friday";
+//         break;
+
+//     case 6:
+//         cout << "saturday";
+//         break;
+
+//     case 7:
+//         cout << "sunday";
+//         break;
+
+//     default:
+//         cout << "invalid";
+//     }
+
+//     return 0;
+// }
+
+
+// ARRAY : use when you have similar data types multiple times.
+// every data should have same data type 
+
+/*
+int main(){
+    int arr[5];
+    cin >> arr[0] >> arr[1] >> arr[2] >>arr[3] >> arr[4] ;
+
+    arr[0] += 10;  //we can modify after creating the array
+
+    cout << arr[0];
+    return 0;
+}
+*/
+
+// array elements are stored in consecutive manner or we can say it is stored in contiguous memory address location in the memory but we can't say anthing about the first one
+
+
+// 2-D ARRAY :
+// int main(){
+
+//     int arr[3][5];  //3 rows 5 columns
+//     arr[1][3] = 45;
+
+//     cout << arr[1][3];
+
+//     return 0;
+// }
+
+// NOTE : the location that we have not defined contain some garbage value
+// array always starts with 0th index
+
+// STRING : 
+
+int main(){
+
+    string s = "striver";
+    cout << s[1];
+    cout << endl;
+    int len = s.size();
+    cout << s[len -1];
+    return 0;
+}
+
+
