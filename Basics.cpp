@@ -51,6 +51,7 @@ using namespace std;
 // int main(){
 //     string str;
 //     getline(cin , str);
+//     // cin >> str;
 //     cout << str;
 //     return 0;
 // }
@@ -179,16 +180,139 @@ int main(){
 // NOTE : the location that we have not defined contain some garbage value
 // array always starts with 0th index
 
-// STRING : 
+// STRING :is basically a sequence of characters (char).
+//  string also stores every char using indexes
+// last index is the length of the string 
 
+/*
 int main(){
 
     string s = "striver";
     cout << s[1];
     cout << endl;
     int len = s.size();
-    cout << s[len -1];
+    // s[len - 1] = "z"; ✖️
+    // error -->> "z" → this is not a character, it is a string literal (array of 2 characters: 'z' and '\0').
+    s[len -1] = 'z';👍
+    // cout << s[len -1];
+
+    return 0;
+}
+*/
+
+// LOOPS --------------
+
+/*
+int main(){
+
+    for(int i=0) // run for one time
+    for(int i =0 ;i<=10)  //run for infinte as i=1 always true
+    int i =0;
+
+    for loop
+    for(i =0 ; i<=2 ; i+=1){
+            cout<<"hi"<<endl;
+    }
+
+
+    while loop
+    while(i<=2){
+
+         cout<<"hi"<<endl;
+        i+=1;
+    }
+
+    Do while loop
+    int i=2;
+    do{
+        cout << "Striver" <<i<<endl;
+        i+=1;
+    }while(i<=1);
+    cout << i <<endl;
+
     return 0;
 }
 
+*/
 
+
+// Functions (Pass by Reference and Value)
+
+/*
+Functions are set of code which performs something for you
+Functions are used to ,modularise code
+Functions are used to increase readability
+Funcitons are used to use same code multiple times
+
+TYPES OF FUNCTIONS :
+
+void -> which does not returns anything
+return
+parameterised
+non-parameterised
+*/
+
+// void print(string name){
+//     cout << "jai "<<name;
+// }
+// int main(){
+//     string name;
+//     getline(cin , name);
+//     print(name);  //calling the function
+
+//     return 0;
+// }
+
+// Q : Take two number and print their sum
+
+// int sum(int a ,int b){
+//     int c = a+b;
+//     return c;
+// }
+
+// int main(){
+
+//     int a , b ;
+//     cout << "enter two numbers" ;
+//     cin >> a >> b ; 
+//     int res = sum(a,b);
+//     cout << res;
+//     return 0;
+// }
+
+
+// CONCEPT : Pass by Value(a copy of the original is send to the required funtion in which it is passed)
+
+/*
+void doSomething(int num){
+    cout << num <<endl;
+    num +=5;
+    cout <<num <<endl;
+    num +=5;
+    cout << num <<endl;
+}
+
+int main(){
+
+    int num = 10;
+    doSomething(num); //a copy of num is send to the function
+    cout << num <<endl;
+    return 0;
+}
+*/
+
+// CONCEPT : Pass by Reference(here we use & which send s the address of the string originally)
+
+void doSomething(string &s){
+    s[0] = 't';
+    cout << s << endl;
+}
+
+int main(){
+    string s = " raj";
+    int len = s.length();
+    cout << len <<endl;
+    doSomething(s);
+    cout << s << endl;
+    return 0;
+}
