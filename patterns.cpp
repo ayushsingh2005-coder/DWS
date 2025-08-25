@@ -165,6 +165,48 @@ void print7(int n){
 }
 
 
+/*
+   *
+  ***
+ *****
+*******
+*******
+ ***** 
+  ***  
+   *   
+*/
+
+// use the above two methods to print it (functions name print6() and print7())
+
+
+/*
+*
+**
+***
+****
+***
+**
+*
+*/
+void print8(int n){
+    for(int i = 1; i<=2*n-1 ; i++){
+        int stars = i;
+        if(i > n)  stars = 2*n-i;
+        for(int j = 1;j<=stars ; j++){
+            cout << "*";
+        }
+        cout <<endl;
+    }
+}
+
+
+
+/*
+
+*/
+void print9(int n){
+    
+}
 
 
 
@@ -181,7 +223,9 @@ int main(){
         // print4(n);
         // print5(n);
         // print6(n);
-        print7(n);
+        // print7(n);
+        // print8(n);
+        print9(n);
     }
     return 0;
 }
